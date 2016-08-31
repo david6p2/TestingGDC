@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1909" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-uC-9jT">
+                                <rect key="frame" x="251" y="95" width="99" height="30"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Array (Rapido)"/>
+                                <connections>
+                                    <action selector="runAlgorithm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWs-SA-6WJ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggk-fS-YsT">
+                                <rect key="frame" x="252" y="57" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="gSZ-9B-u47"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Que Fibonacci?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROv-TB-0y3">
+                                <rect key="frame" x="241" y="28" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5z-zc-oJj">
+                                <rect key="frame" x="240" y="133" width="120" height="30"/>
+                                <state key="normal" title="Recursivo (Lento)">
+                                    <color key="titleColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="runAlgorithm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x4W-EE-lmg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c5z-zc-oJj" firstAttribute="top" secondItem="D2i-uC-9jT" secondAttribute="bottom" constant="8" id="3pQ-pY-V1Y"/>
+                            <constraint firstItem="ROv-TB-0y3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BiK-PR-h56"/>
+                            <constraint firstItem="Ggk-fS-YsT" firstAttribute="top" secondItem="ROv-TB-0y3" secondAttribute="bottom" constant="8" symbolic="YES" id="Gpp-Az-ho2"/>
+                            <constraint firstItem="c5z-zc-oJj" firstAttribute="centerX" secondItem="D2i-uC-9jT" secondAttribute="centerX" id="MFY-88-7YX"/>
+                            <constraint firstItem="D2i-uC-9jT" firstAttribute="top" secondItem="Ggk-fS-YsT" secondAttribute="bottom" constant="8" symbolic="YES" id="W0b-La-IE1"/>
+                            <constraint firstItem="ROv-TB-0y3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iKh-K8-Zu7"/>
+                            <constraint firstItem="Ggk-fS-YsT" firstAttribute="centerX" secondItem="D2i-uC-9jT" secondAttribute="centerX" id="sNT-A0-ChU"/>
+                            <constraint firstItem="Ggk-fS-YsT" firstAttribute="centerX" secondItem="ROv-TB-0y3" secondAttribute="centerX" id="yqE-Nm-OlA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fibLbl" destination="ROv-TB-0y3" id="rIg-Cx-Ocm"/>
+                        <outlet property="numberTxtFld" destination="Ggk-fS-YsT" id="o1E-Nk-zUn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

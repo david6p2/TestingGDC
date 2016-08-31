@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *fibLbl;
+@property (weak, nonatomic) IBOutlet UITextField *numberTxtFld;
+
+- (IBAction)runAlgorithm:(UIButton *)sender;
 
 @end
 
